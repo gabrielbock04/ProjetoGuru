@@ -21,56 +21,56 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     public SignosGabrielEGustavoNoite() {
         initComponents();
     }
-    
+
     public String calcularSigno(int dia, int mes, int ano) {
-        
+
         String signo = "";
         if (dia >= 21 && dia <= 31 && mes == 3 || dia >= 1 && dia <= 20 && mes == 4) {
-            
+
             signo = "Aries";
         }
         if (dia >= 21 && dia <= 30 && mes == 4 || dia >= 1 && dia <= 20 && mes == 5) {
-            
+
             signo = "Touro";
         }
         if (dia >= 21 && dia <= 31 && mes == 5 || dia >= 1 && dia <= 20 && mes == 6) {
-            
+
             signo = "Gêmeos";
         }
         if (dia >= 21 && dia <= 30 && mes == 6 || dia >= 1 && dia <= 21 && mes == 7) {
-            
+
             signo = "Câncer";
         }
         if (dia >= 22 && dia <= 31 && mes == 7 || dia >= 1 && dia <= 22 && mes == 8) {
-            
+
             signo = "Leão";
         }
         if (dia >= 23 && dia <= 30 && mes == 8 || dia >= 1 && dia <= 22 && mes == 9) {
-            
+
             signo = "Virgem";
         }
         if (dia >= 23 && dia <= 31 && mes == 9 || dia >= 1 && dia <= 22 && mes == 10) {
-            
+
             signo = "Libra";
         }
         if (dia >= 23 && dia <= 30 && mes == 10 || dia >= 1 && dia <= 21 && mes == 11) {
-            
+
             signo = "Escorpião";
         }
         if (dia >= 22 && dia <= 31 && mes == 11 || dia >= 1 && dia <= 21 && mes == 12) {
-            
+
             signo = "Sagitário";
         }
         if (dia >= 22 && dia <= 30 && mes == 12 || dia >= 1 && dia <= 20 && mes == 1) {
-            
+
             signo = "Capricórnio";
         }
         if (dia >= 21 && dia <= 31 && mes == 1 || dia >= 1 && dia <= 19 && mes == 2) {
-            
+
             signo = "Aquário";
         }
         if (dia >= 20 && dia <= 30 && mes == 2 || dia >= 1 && dia <= 20 && mes == 3) {
-            
+
             signo = "Peixes";
         }
         return signo;
@@ -84,15 +84,25 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
             tratamento = "Sr";
         }
         return tratamento;
-        
+
     }
-    
-    public double calcularIdade(double dia, double mes,double ano){
-        double idade=0;
-        dia=Double.parseDouble(txtDia.getText());
-        mes=Double.parseDouble(txtMes.getText());
-        ano=Double.parseDouble(txtAno.getText());
-        idade=(2024-ano);
+
+    public int calcularIdade(int dia, int mes, int ano) {
+        LocalDate agr = LocalDate.now();
+        int idade = 0;
+        int diaAtual, mesAtual, anoAtual;
+        diaAtual = agr.getDayOfMonth();
+        mesAtual = agr.getMonthValue();
+        anoAtual = agr.getYear();
+        dia = Integer.parseInt(txtDia.getText());
+        mes = Integer.parseInt(txtMes.getText());
+        ano = Integer.parseInt(txtAno.getText());
+
+        if (mes > mesAtual) {
+            idade = (2024 - ano - 1);
+        } else {
+            idade = 2024 - ano;
+        }
         return idade;
     }
 
@@ -136,7 +146,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbResumo.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lbResumo.setForeground(new java.awt.Color(255, 255, 255));
         lbResumo.setText("Resumo");
-        getContentPane().add(lbResumo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 330, 30));
+        getContentPane().add(lbResumo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 380, 30));
 
         lbLimpar.setText("Limpar");
         lbLimpar.addActionListener(new java.awt.event.ActionListener() {
@@ -274,8 +284,8 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         ano = Integer.parseInt(txtAno.getText());
         nome = txtNome.getText();
         signo = calcularSigno(dia, mes, ano);
-        lbResumo.setText(fazerTratamento(nome)+" "+nome+" você é do signo de "+signo);
-        lbResumo1.setText("Você tem "+d.format((calcularIdade(dia, mes, ano)))+" anos de idade");
+        lbResumo.setText(fazerTratamento(nome) + " " + nome + " você é do signo de " + signo);
+        lbResumo1.setText("Você tem " + d.format((calcularIdade(dia, mes, ano))) + " anos de idade");
         lbLimpar.setText(signo);
     }//GEN-LAST:event_lbConsultarActionPerformed
 
@@ -283,7 +293,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
+
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
