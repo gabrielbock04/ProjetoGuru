@@ -274,6 +274,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         signo = calcularSigno(dia, mes, ano);
         lbResumo.setText(fazerTratamento(nome)+" "+nome+" você é do signo de "+signo);
         lbResumo1.setText("Você tem "+calcularIdade(dia, mes, ano)+" anos de idade");
+        lbLimpar.setText(signo);
     }//GEN-LAST:event_lbConsultarActionPerformed
 
     /**
