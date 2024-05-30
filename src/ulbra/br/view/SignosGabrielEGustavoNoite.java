@@ -5,6 +5,8 @@
  */
 package ulbra.br.view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aluno.saolucas
@@ -108,7 +110,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                 lbLimparActionPerformed(evt);
             }
         });
-        getContentPane().add(lbLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, -1, -1));
+        getContentPane().add(lbLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, -1, -1));
 
         lbConsultar.setText("Consultar");
         lbConsultar.addActionListener(new java.awt.event.ActionListener() {
@@ -150,7 +152,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                 txtAnoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, 70, -1));
+        getContentPane().add(txtAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 70, -1));
 
         txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,7 +191,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         getContentPane().add(lbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
 
         lbAno.setText("Ano");
-        getContentPane().add(lbAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, -1, -1));
+        getContentPane().add(lbAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, -1, -1));
 
         lbNome.setText("Nome:");
         getContentPane().add(lbNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 40, 30));
@@ -229,6 +231,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         ano=Integer.parseInt(txtDia.getText());
         nome = txtNome.getText();
         signo=calcularSigno(dia, mes, ano);
+        JOptionPane.showMessageDialog(null, "OlÁ");
     }//GEN-LAST:event_lbConsultarActionPerformed
 
     /**
