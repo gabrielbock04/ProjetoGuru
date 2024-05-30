@@ -74,18 +74,6 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         return signo;
     }
 
-    public String fazerTratamento(String nome) {
-        String tratamento = ("");
-        if (rbMasc.isSelected()) {
-            tratamento = "Sr";
-
-        } else {
-            tratamento = "Sra";
-        }
-
-        return tratamento;
-    }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -96,79 +84,42 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        rbMasc = new javax.swing.JRadioButton();
-        rbFem = new javax.swing.JRadioButton();
-        lbMes = new javax.swing.JLabel();
-        lbSexo = new javax.swing.JLabel();
-        lbDia = new javax.swing.JLabel();
-        lbAno = new javax.swing.JLabel();
-        btLimpar = new javax.swing.JButton();
-        btConsultar = new javax.swing.JButton();
-        lbResumo = new javax.swing.JLabel();
+        lbLimpar = new javax.swing.JButton();
+        lbConsultar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        lbMes = new javax.swing.JLabel();
         txtAno = new javax.swing.JTextField();
         txtNome = new javax.swing.JTextField();
         txtDia = new javax.swing.JTextField();
         txtMes = new javax.swing.JTextField();
+        lbSexo = new javax.swing.JLabel();
+        rbFem = new javax.swing.JRadioButton();
+        rbMasc = new javax.swing.JRadioButton();
+        lbDia = new javax.swing.JLabel();
+        lbAno = new javax.swing.JLabel();
         lbNome = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        lbResumo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        buttonGroup1.add(rbMasc);
-        rbMasc.setForeground(new java.awt.Color(255, 255, 255));
-        rbMasc.setSelected(true);
-        rbMasc.setText("Masculino");
-        getContentPane().add(rbMasc, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
-
-        buttonGroup1.add(rbFem);
-        rbFem.setForeground(new java.awt.Color(255, 255, 255));
-        rbFem.setText("Feminino");
-        getContentPane().add(rbFem, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, -1));
-
-        lbMes.setBackground(new java.awt.Color(0, 0, 0));
-        lbMes.setForeground(new java.awt.Color(255, 255, 255));
-        lbMes.setText("Mês");
-        getContentPane().add(lbMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, -1, -1));
-
-        lbSexo.setBackground(new java.awt.Color(0, 0, 0));
-        lbSexo.setForeground(new java.awt.Color(255, 255, 255));
-        lbSexo.setText("Sexo");
-        getContentPane().add(lbSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
-
-        lbDia.setBackground(new java.awt.Color(0, 0, 0));
-        lbDia.setForeground(new java.awt.Color(255, 255, 255));
-        lbDia.setText("Dia");
-        getContentPane().add(lbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
-
-        lbAno.setBackground(new java.awt.Color(0, 0, 0));
-        lbAno.setForeground(new java.awt.Color(255, 255, 255));
-        lbAno.setText("Ano");
-        getContentPane().add(lbAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, -1, -1));
-
-        btLimpar.setText("Limpar");
-        btLimpar.addActionListener(new java.awt.event.ActionListener() {
+        lbLimpar.setText("Limpar");
+        lbLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btLimparActionPerformed(evt);
+                lbLimparActionPerformed(evt);
             }
         });
-        getContentPane().add(btLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, -1, -1));
+        getContentPane().add(lbLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, -1, -1));
 
-        btConsultar.setText("Consultar");
-        btConsultar.addActionListener(new java.awt.event.ActionListener() {
+        lbConsultar.setText("Consultar");
+        lbConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btConsultarActionPerformed(evt);
+                lbConsultarActionPerformed(evt);
             }
         });
-        getContentPane().add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, -1, -1));
-
-        lbResumo.setBackground(new java.awt.Color(0, 0, 0));
-        lbResumo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        lbResumo.setForeground(new java.awt.Color(255, 255, 255));
-        lbResumo.setText("RESUMO");
-        getContentPane().add(lbResumo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, -1, -1));
+        getContentPane().add(lbConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, -1, -1));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 51));
 
@@ -181,62 +132,83 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(39, 39, 39)
                 .addComponent(jLabel2)
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 8, Short.MAX_VALUE)
-                .addComponent(jLabel2))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel2)
+                .addGap(0, 8, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 260, 40));
+
+        lbMes.setText("Mês");
+        getContentPane().add(lbMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, -1, -1));
 
         txtAno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAnoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, 70, -1));
+        getContentPane().add(txtAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 70, -1));
 
         txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomeActionPerformed(evt);
             }
         });
-        getContentPane().add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 240, -1));
+        getContentPane().add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 240, -1));
 
         txtDia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDiaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 70, -1));
+        getContentPane().add(txtDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 70, -1));
 
         txtMes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMesActionPerformed(evt);
             }
         });
-        getContentPane().add(txtMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 70, -1));
+        getContentPane().add(txtMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, 70, -1));
 
-        lbNome.setBackground(new java.awt.Color(0, 0, 0));
-        lbNome.setForeground(new java.awt.Color(255, 255, 255));
+        lbSexo.setText("Sexo");
+        getContentPane().add(lbSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
+
+        buttonGroup1.add(rbFem);
+        rbFem.setText("Feminino");
+        getContentPane().add(rbFem, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, -1));
+
+        buttonGroup1.add(rbMasc);
+        rbMasc.setSelected(true);
+        rbMasc.setText("Masculino");
+        getContentPane().add(rbMasc, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
+
+        lbDia.setText("Dia");
+        getContentPane().add(lbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
+
+        lbAno.setText("Ano");
+        getContentPane().add(lbAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, -1, -1));
+
         lbNome.setText("Nome:");
-        getContentPane().add(lbNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 40, 30));
+        getContentPane().add(lbNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 40, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Logo signos.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 540));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 538, -1));
+
+        lbResumo.setText("Resumo");
+        getContentPane().add(lbResumo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 400, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
+    private void lbLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lbLimparActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btLimparActionPerformed
+    }//GEN-LAST:event_lbLimparActionPerformed
 
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
         // TODO add your handling code here:
@@ -254,17 +226,16 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDiaActionPerformed
 
-    private void btConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarActionPerformed
-        String nome, signo;
-        int dia, mes, ano;
-        dia = Integer.parseInt(txtDia.getText());
-        mes = Integer.parseInt(txtMes.getText());
-        ano = Integer.parseInt(txtAno.getText());
+    private void lbConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lbConsultarActionPerformed
+        String nome,signo;
+        int dia,mes,ano;
+        dia=Integer.parseInt(txtDia.getText());
+        mes=Integer.parseInt(txtDia.getText());
+        ano=Integer.parseInt(txtDia.getText());
         nome = txtNome.getText();
-        signo = calcularSigno(dia, mes, ano);
-        lbResumo.setText(fazerTratamento(nome) + " " + nome + " Seu signo é " + signo);
-        JOptionPane.showMessageDialog(null, "Olá mundo");
-    }//GEN-LAST:event_btConsultarActionPerformed
+        signo=calcularSigno(dia, mes, ano);
+        lbResumo.setText(nome+signo);
+    }//GEN-LAST:event_lbConsultarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -302,14 +273,14 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btConsultar;
-    private javax.swing.JButton btLimpar;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbAno;
+    private javax.swing.JButton lbConsultar;
     private javax.swing.JLabel lbDia;
+    private javax.swing.JButton lbLimpar;
     private javax.swing.JLabel lbMes;
     private javax.swing.JLabel lbNome;
     private javax.swing.JLabel lbResumo;
