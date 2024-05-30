@@ -5,6 +5,8 @@
  */
 package ulbra.br.view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aluno.saolucas
@@ -179,15 +181,15 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addContainerGap()
                 .addComponent(jLabel2)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addGap(0, 8, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 8, Short.MAX_VALUE)
+                .addComponent(jLabel2))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 260, 40));
@@ -204,7 +206,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                 txtNomeActionPerformed(evt);
             }
         });
-        getContentPane().add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 240, -1));
+        getContentPane().add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 240, -1));
 
         txtDia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,7 +225,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbNome.setBackground(new java.awt.Color(0, 0, 0));
         lbNome.setForeground(new java.awt.Color(255, 255, 255));
         lbNome.setText("Nome:");
-        getContentPane().add(lbNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 40, 30));
+        getContentPane().add(lbNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 40, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Logo signos.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -261,6 +263,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         nome = txtNome.getText();
         signo = calcularSigno(dia, mes, ano);
         lbResumo.setText(fazerTratamento(nome) + " " + nome + " Seu signo é " + signo);
+        JOptionPane.showMessageDialog(null, "Olá mundo");
     }//GEN-LAST:event_btConsultarActionPerformed
 
     /**
