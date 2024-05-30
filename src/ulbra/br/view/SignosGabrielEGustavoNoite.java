@@ -5,6 +5,7 @@
  */
 package ulbra.br.view;
 
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 import javax.swing.JOptionPane;
 
@@ -265,6 +266,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     }//GEN-LAST:event_txtDiaActionPerformed
 
     private void lbConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lbConsultarActionPerformed
+        DecimalFormat d = new DecimalFormat("0");
         String nome, signo;
         int dia, mes, ano;
         dia = Integer.parseInt(txtDia.getText());
@@ -273,7 +275,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         nome = txtNome.getText();
         signo = calcularSigno(dia, mes, ano);
         lbResumo.setText(fazerTratamento(nome)+" "+nome+" você é do signo de "+signo);
-        lbResumo1.setText("Você tem "+calcularIdade(dia, mes, ano)+" anos de idade");
+        lbResumo1.setText("Você tem "+d.format((calcularIdade(dia, mes, ano)))+" anos de idade");
         lbLimpar.setText(signo);
     }//GEN-LAST:event_lbConsultarActionPerformed
 
@@ -281,6 +283,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
