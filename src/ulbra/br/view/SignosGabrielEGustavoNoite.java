@@ -260,7 +260,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         ano = Integer.parseInt(txtAno.getText());
         nome = txtNome.getText();
         signo = calcularSigno(dia, mes, ano);
-        lbResumo.setText(fazerTratamento(nome) + " " + nome + " Seu signo é " + signo+" Que legal.");
+        lbResumo.setText(fazerTratamento(nome) + " " + nome + " Seu signo é " + signo);
     }//GEN-LAST:event_btConsultarActionPerformed
 
     /**
