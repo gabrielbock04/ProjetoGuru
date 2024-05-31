@@ -5,6 +5,7 @@
  */
 package ulbra.br.view;
 
+import java.awt.Color;
 import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.util.Random;
@@ -160,6 +161,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         lbSagitario = new javax.swing.JLabel();
+        txtNome = new javax.swing.JTextField();
         lbCancer = new javax.swing.JLabel();
         lbPeixes = new javax.swing.JLabel();
         lbAquario = new javax.swing.JLabel();
@@ -186,7 +188,6 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbAno = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        txtNome = new javax.swing.JTextField();
         rbFem = new javax.swing.JRadioButton();
         rbMasc = new javax.swing.JRadioButton();
         lbNome = new javax.swing.JLabel();
@@ -197,6 +198,23 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
 
         lbSagitario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif sagita resized.gif"))); // NOI18N
         getContentPane().add(lbSagitario, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
+
+        txtNome.setForeground(new java.awt.Color(0, 0, 0));
+        txtNome.setText("Insira seu nome completo");
+        txtNome.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtNomeFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtNomeFocusLost(evt);
+            }
+        });
+        txtNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 240, -1));
 
         lbCancer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Cancer.gif"))); // NOI18N
         getContentPane().add(lbCancer, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
@@ -340,13 +358,6 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 260, 40));
-
-        txtNome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNomeActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 240, -1));
 
         buttonGroup1.add(rbFem);
         rbFem.setForeground(new java.awt.Color(255, 255, 255));
@@ -540,6 +551,19 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_txtMesKeyTyped
+
+    private void txtNomeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNomeFocusGained
+        if (txtNome.getText().equals("Insira seu nome completo")) {
+            txtNome.setText("");
+        }
+        
+    }//GEN-LAST:event_txtNomeFocusGained
+
+    private void txtNomeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNomeFocusLost
+        if (txtNome.getText().equals("")) {
+            txtNome.setText("Insira seu nome completo");
+        }
+    }//GEN-LAST:event_txtNomeFocusLost
 
     /**
      * @param args the command line arguments
