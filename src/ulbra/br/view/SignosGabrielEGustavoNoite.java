@@ -7,6 +7,7 @@ package ulbra.br.view;
 
 import java.text.DecimalFormat;
 import java.time.LocalDate;
+import java.util.Random;
 import javax.swing.JOptionPane;
 
 /**
@@ -87,6 +88,15 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
 
     }
 
+    public String declararCorDaSorte(String cor) {
+        String corAleatoria[] = {"azul", "vermelho", "amarelo", "verde"};
+        Random nCor = new Random();
+        int i = nCor.nextInt(corAleatoria.length);
+        String cores = corAleatoria[i];
+
+        return cores;
+    }
+
     public int calcularIdade(int dia, int mes, int ano) {
         LocalDate agr = LocalDate.now();
         int idade = 0;
@@ -98,11 +108,12 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         mes = Integer.parseInt(txtMes.getText());
         ano = Integer.parseInt(txtAno.getText());
 
-        if (mes > mesAtual) {
+        if (mes >= mesAtual) {
             idade = (2024 - ano - 1);
-        } else {
+        } else if (mes <= mesAtual && dia <= diaAtual) {
             idade = 2024 - ano;
         }
+
         return idade;
     }
 
@@ -116,6 +127,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        lbResumo2 = new javax.swing.JLabel();
         lbResumo1 = new javax.swing.JLabel();
         lbResumo = new javax.swing.JLabel();
         lbLimpar = new javax.swing.JButton();
@@ -138,15 +150,18 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lbResumo2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lbResumo2.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(lbResumo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 380, 30));
+
         lbResumo1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lbResumo1.setForeground(new java.awt.Color(255, 255, 255));
-        lbResumo1.setText("Resumo");
-        getContentPane().add(lbResumo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 330, 30));
+        getContentPane().add(lbResumo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 330, 30));
 
         lbResumo.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lbResumo.setForeground(new java.awt.Color(255, 255, 255));
         lbResumo.setText("Resumo");
-        getContentPane().add(lbResumo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 380, 30));
+        getContentPane().add(lbResumo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 380, 30));
 
         lbLimpar.setText("Limpar");
         lbLimpar.addActionListener(new java.awt.event.ActionListener() {
@@ -154,7 +169,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                 lbLimparActionPerformed(evt);
             }
         });
-        getContentPane().add(lbLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, -1, -1));
+        getContentPane().add(lbLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, -1, -1));
 
         lbConsultar.setText("Consultar");
         lbConsultar.addActionListener(new java.awt.event.ActionListener() {
@@ -162,44 +177,44 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                 lbConsultarActionPerformed(evt);
             }
         });
-        getContentPane().add(lbConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, -1, -1));
+        getContentPane().add(lbConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, -1, -1));
 
         lbMes.setForeground(new java.awt.Color(255, 255, 255));
         lbMes.setText("Mês");
-        getContentPane().add(lbMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, -1, -1));
+        getContentPane().add(lbMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, -1, -1));
 
         txtAno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAnoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, 70, -1));
+        getContentPane().add(txtAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, 70, -1));
 
         txtDia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDiaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 70, -1));
+        getContentPane().add(txtDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 70, -1));
 
         txtMes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMesActionPerformed(evt);
             }
         });
-        getContentPane().add(txtMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 70, -1));
+        getContentPane().add(txtMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 70, -1));
 
         lbSexo.setForeground(new java.awt.Color(255, 255, 255));
         lbSexo.setText("Sexo");
-        getContentPane().add(lbSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, -1));
+        getContentPane().add(lbSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
         lbDia.setForeground(new java.awt.Color(255, 255, 255));
         lbDia.setText("Dia");
-        getContentPane().add(lbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
+        getContentPane().add(lbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, -1));
 
         lbAno.setForeground(new java.awt.Color(255, 255, 255));
         lbAno.setText("Ano");
-        getContentPane().add(lbAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, -1, -1));
+        getContentPane().add(lbAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, -1, -1));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 51));
 
@@ -236,19 +251,19 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         buttonGroup1.add(rbFem);
         rbFem.setForeground(new java.awt.Color(255, 255, 255));
         rbFem.setText("Feminino");
-        getContentPane().add(rbFem, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, -1));
+        getContentPane().add(rbFem, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, -1, -1));
 
         buttonGroup1.add(rbMasc);
         rbMasc.setForeground(new java.awt.Color(255, 255, 255));
         rbMasc.setSelected(true);
         rbMasc.setText("Masculino");
-        getContentPane().add(rbMasc, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
+        getContentPane().add(rbMasc, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
 
         lbNome.setForeground(new java.awt.Color(255, 255, 255));
         lbNome.setText("Nome:");
         getContentPane().add(lbNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 40, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Logo signos.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\Logo signos Desfocada.jpg")); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, -1));
 
@@ -277,15 +292,18 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
 
     private void lbConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lbConsultarActionPerformed
         DecimalFormat d = new DecimalFormat("0");
-        String nome, signo;
+        String nome, signo, cor;
         int dia, mes, ano;
+        cor = "";
         dia = Integer.parseInt(txtDia.getText());
         mes = Integer.parseInt(txtMes.getText());
         ano = Integer.parseInt(txtAno.getText());
         nome = txtNome.getText();
+        cor = declararCorDaSorte(cor);
         signo = calcularSigno(dia, mes, ano);
         lbResumo.setText(fazerTratamento(nome) + " " + nome + " você é do signo de " + signo);
         lbResumo1.setText("Você tem " + d.format((calcularIdade(dia, mes, ano))) + " anos de idade");
+        lbResumo2.setText("Sua cor da sorte é " + cor);
         lbLimpar.setText(signo);
     }//GEN-LAST:event_lbConsultarActionPerformed
 
@@ -304,16 +322,24 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SignosGabrielEGustavoNoite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SignosGabrielEGustavoNoite.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SignosGabrielEGustavoNoite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SignosGabrielEGustavoNoite.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SignosGabrielEGustavoNoite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SignosGabrielEGustavoNoite.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SignosGabrielEGustavoNoite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SignosGabrielEGustavoNoite.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -338,6 +364,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     private javax.swing.JLabel lbNome;
     private javax.swing.JLabel lbResumo;
     private javax.swing.JLabel lbResumo1;
+    private javax.swing.JLabel lbResumo2;
     private javax.swing.JLabel lbSexo;
     private javax.swing.JRadioButton rbFem;
     private javax.swing.JRadioButton rbMasc;
