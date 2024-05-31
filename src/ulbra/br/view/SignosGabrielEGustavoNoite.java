@@ -182,8 +182,6 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         rbMasc = new javax.swing.JRadioButton();
         lbNome = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        lbCancer1 = new javax.swing.JLabel();
-        lbAries1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -197,7 +195,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbPeixes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Peixes.gif"))); // NOI18N
         getContentPane().add(lbPeixes, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
 
-        lbAquario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Aquario.png"))); // NOI18N
+        lbAquario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Aquario.gif"))); // NOI18N
         getContentPane().add(lbAquario, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
 
         lbCapricornio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Capricornio.gif"))); // NOI18N
@@ -341,12 +339,6 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, -1));
 
-        lbCancer1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Cancer.gif"))); // NOI18N
-        getContentPane().add(lbCancer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, -1, -1));
-
-        lbAries1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Aries.gif"))); // NOI18N
-        getContentPane().add(lbAries1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, -1, -1));
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -355,6 +347,21 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         txtAno.setText(null);
         txtDia.setText(null);
         txtMes.setText(null);
+        lbResumo.setText("Resumo");
+        lbResumo1.setText(null);
+        lbResumo2.setText(null);
+        lbAries.setIcon(null);
+        lbTouro.setIcon(null);
+        lbGemeos.setIcon(null);
+        lbCancer.setIcon(null);
+        lbLeao.setIcon(null);
+        lbVirgem.setIcon(null);
+        lbLibra.setIcon(null);
+        lbEscorpiao.setIcon(null);
+        lbSagitario.setIcon(null);
+        lbCapricornio.setIcon(null);
+        lbAquario.setIcon(null);
+        lbPeixes.setIcon(null);
     }//GEN-LAST:event_lbLimparActionPerformed
 
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
@@ -387,6 +394,18 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbResumo.setText(fazerTratamento(nome) + " " + nome + " você é do signo de " + signo);
         lbResumo1.setText("Você tem " + d.format((calcularIdade(dia, mes, ano))) + " anos de idade");
         lbResumo2.setText("Sua cor da sorte é " + cor);
+        lbSagitario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif sagita resized.gif")));
+        lbAries.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Aries.gif")));
+        lbTouro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif touro.gif")));
+        lbCancer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Cancer.gif")));
+        lbGemeos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif gemeos.gif")));
+        lbLeao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif leo.gif")));
+        lbVirgem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Virgo.gif")));
+        lbLibra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif libra.gif")));
+        lbEscorpiao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Scorpio.gif")));
+        lbCapricornio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Capricornio.gif")));
+        lbAquario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Aquario.gif")));
+        lbPeixes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Peixes.gif")));
         lbAries.setVisible(false);
         lbTouro.setVisible(false);
         lbGemeos.setVisible(false);
@@ -490,9 +509,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     private javax.swing.JLabel lbAno;
     private javax.swing.JLabel lbAquario;
     private javax.swing.JLabel lbAries;
-    private javax.swing.JLabel lbAries1;
     private javax.swing.JLabel lbCancer;
-    private javax.swing.JLabel lbCancer1;
     private javax.swing.JLabel lbCapricornio;
     private javax.swing.JButton lbConsultar;
     private javax.swing.JLabel lbDia;
