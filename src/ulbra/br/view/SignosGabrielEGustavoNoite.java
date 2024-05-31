@@ -21,6 +21,30 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
      */
     public SignosGabrielEGustavoNoite() {
         initComponents();
+        lbAries.setVisible(false);
+
+        lbTouro.setVisible(false);
+
+        lbCancer.setVisible(false);
+
+        lbGemeos.setVisible(false);
+
+        lbLeao.setVisible(false);
+
+        lbVirgem.setVisible(false);
+
+        lbLibra.setVisible(false);
+
+        lbEscorpiao.setVisible(false);
+
+        lbSagitario.setVisible(false);
+
+        lbCapricornio.setVisible(false);
+
+        lbAquario.setVisible(false);
+
+        lbPeixes.setVisible(false);
+
     }
 
     public String calcularSigno(int dia, int mes, int ano) {
@@ -127,6 +151,18 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        lbSagitario = new javax.swing.JLabel();
+        lbCancer = new javax.swing.JLabel();
+        lbPeixes = new javax.swing.JLabel();
+        lbAquario = new javax.swing.JLabel();
+        lbCapricornio = new javax.swing.JLabel();
+        lbEscorpiao = new javax.swing.JLabel();
+        lbLibra = new javax.swing.JLabel();
+        lbVirgem = new javax.swing.JLabel();
+        lbLeao = new javax.swing.JLabel();
+        lbGemeos = new javax.swing.JLabel();
+        lbTouro = new javax.swing.JLabel();
+        lbAries = new javax.swing.JLabel();
         lbResumo2 = new javax.swing.JLabel();
         lbResumo1 = new javax.swing.JLabel();
         lbResumo = new javax.swing.JLabel();
@@ -146,9 +182,47 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         rbMasc = new javax.swing.JRadioButton();
         lbNome = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        lbCancer1 = new javax.swing.JLabel();
+        lbAries1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lbSagitario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif sagita resized.gif"))); // NOI18N
+        getContentPane().add(lbSagitario, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+
+        lbCancer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Cancer.gif"))); // NOI18N
+        getContentPane().add(lbCancer, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+
+        lbPeixes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Peixes.gif"))); // NOI18N
+        getContentPane().add(lbPeixes, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+
+        lbAquario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Aquario.png"))); // NOI18N
+        getContentPane().add(lbAquario, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+
+        lbCapricornio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Capricornio.gif"))); // NOI18N
+        getContentPane().add(lbCapricornio, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+
+        lbEscorpiao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Scorpio.gif"))); // NOI18N
+        getContentPane().add(lbEscorpiao, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+
+        lbLibra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif libra.gif"))); // NOI18N
+        getContentPane().add(lbLibra, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+
+        lbVirgem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Virgo.gif"))); // NOI18N
+        getContentPane().add(lbVirgem, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+
+        lbLeao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif leo.gif"))); // NOI18N
+        getContentPane().add(lbLeao, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+
+        lbGemeos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif gemeos.gif"))); // NOI18N
+        getContentPane().add(lbGemeos, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+
+        lbTouro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif touro.gif"))); // NOI18N
+        getContentPane().add(lbTouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+
+        lbAries.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Aries.gif"))); // NOI18N
+        getContentPane().add(lbAries, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
 
         lbResumo2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lbResumo2.setForeground(new java.awt.Color(255, 255, 255));
@@ -267,6 +341,12 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, -1));
 
+        lbCancer1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Cancer.gif"))); // NOI18N
+        getContentPane().add(lbCancer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, -1, -1));
+
+        lbAries1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Aries.gif"))); // NOI18N
+        getContentPane().add(lbAries1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -307,6 +387,55 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbResumo.setText(fazerTratamento(nome) + " " + nome + " você é do signo de " + signo);
         lbResumo1.setText("Você tem " + d.format((calcularIdade(dia, mes, ano))) + " anos de idade");
         lbResumo2.setText("Sua cor da sorte é " + cor);
+        lbAries.setVisible(false);
+        lbTouro.setVisible(false);
+        lbGemeos.setVisible(false);
+        lbCancer.setVisible(false);
+        lbLeao.setVisible(false);
+        lbVirgem.setVisible(false);
+        lbLibra.setVisible(false);
+        lbEscorpiao.setVisible(false);
+        lbSagitario.setVisible(false);
+        lbCapricornio.setVisible(false);
+        lbAquario.setVisible(false);
+        lbPeixes.setVisible(false);
+
+        if (signo.equals("Aries")) {
+            lbAries.setVisible(true);
+        }
+        if (signo.equals("Touro")) {
+            lbTouro.setVisible(true);
+        }
+        if (signo.equals("Gêmeos")) {
+            lbGemeos.setVisible(true);
+        }
+        if (signo.equals("Câncer")) {
+            lbCancer.setVisible(true);
+        }
+        if (signo.equals("Leão")) {
+            lbLeao.setVisible(true);
+        }
+        if (signo.equals("Virgem")) {
+            lbVirgem.setVisible(true);
+        }
+        if (signo.equals("Libra")) {
+            lbLibra.setVisible(true);
+        }
+        if (signo.equals("Escorpião")) {
+            lbEscorpiao.setVisible(true);
+        }
+        if (signo.equals("Sagitário")) {
+            lbSagitario.setVisible(true);
+        }
+        if (signo.equals("Capricórnio")) {
+            lbCapricornio.setVisible(true);
+        }
+        if (signo.equals("Aquário")) {
+            lbAquario.setVisible(true);
+        }
+        if (signo.equals("Peixes")) {
+            lbPeixes.setVisible(true);
+        }
     }//GEN-LAST:event_lbConsultarActionPerformed
 
     /**
@@ -359,15 +488,29 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbAno;
+    private javax.swing.JLabel lbAquario;
+    private javax.swing.JLabel lbAries;
+    private javax.swing.JLabel lbAries1;
+    private javax.swing.JLabel lbCancer;
+    private javax.swing.JLabel lbCancer1;
+    private javax.swing.JLabel lbCapricornio;
     private javax.swing.JButton lbConsultar;
     private javax.swing.JLabel lbDia;
+    private javax.swing.JLabel lbEscorpiao;
+    private javax.swing.JLabel lbGemeos;
+    private javax.swing.JLabel lbLeao;
+    private javax.swing.JLabel lbLibra;
     private javax.swing.JButton lbLimpar;
     private javax.swing.JLabel lbMes;
     private javax.swing.JLabel lbNome;
+    private javax.swing.JLabel lbPeixes;
     private javax.swing.JLabel lbResumo;
     private javax.swing.JLabel lbResumo1;
     private javax.swing.JLabel lbResumo2;
+    private javax.swing.JLabel lbSagitario;
     private javax.swing.JLabel lbSexo;
+    private javax.swing.JLabel lbTouro;
+    private javax.swing.JLabel lbVirgem;
     private javax.swing.JRadioButton rbFem;
     private javax.swing.JRadioButton rbMasc;
     private javax.swing.JTextField txtAno;
