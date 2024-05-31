@@ -133,12 +133,20 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         ano = Integer.parseInt(txtAno.getText());
 
         if (mes >= mesAtual) {
-            idade = (2024 - ano - 1);
-        } else if (mes <= mesAtual && dia <= diaAtual) {
-            idade = 2024 - ano;
-        }
 
+            idade = (anoAtual - ano - 1);
+        } else {
+
+            idade = anoAtual - ano;
+        }
         return idade;
+    }
+
+    public int entregarNumeroSorte(int numero) {
+        int nSorte = 0;
+        Random numeroDaSorte = new Random();
+        nSorte = numeroDaSorte.nextInt(100);
+        return nSorte;
     }
 
     /**
@@ -163,6 +171,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbGemeos = new javax.swing.JLabel();
         lbTouro = new javax.swing.JLabel();
         lbAries = new javax.swing.JLabel();
+        lbResumo3 = new javax.swing.JLabel();
         lbResumo2 = new javax.swing.JLabel();
         lbResumo1 = new javax.swing.JLabel();
         lbResumo = new javax.swing.JLabel();
@@ -187,40 +196,42 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbSagitario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif sagita resized.gif"))); // NOI18N
-        getContentPane().add(lbSagitario, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+        getContentPane().add(lbSagitario, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
 
         lbCancer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Cancer.gif"))); // NOI18N
-        getContentPane().add(lbCancer, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+        getContentPane().add(lbCancer, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
 
         lbPeixes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Peixes.gif"))); // NOI18N
-        getContentPane().add(lbPeixes, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
-
-        lbAquario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Aquario.gif"))); // NOI18N
-        getContentPane().add(lbAquario, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+        getContentPane().add(lbPeixes, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
+        getContentPane().add(lbAquario, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
 
         lbCapricornio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Capricornio.gif"))); // NOI18N
-        getContentPane().add(lbCapricornio, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+        getContentPane().add(lbCapricornio, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
 
         lbEscorpiao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Scorpio.gif"))); // NOI18N
-        getContentPane().add(lbEscorpiao, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+        getContentPane().add(lbEscorpiao, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
 
         lbLibra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif libra.gif"))); // NOI18N
-        getContentPane().add(lbLibra, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+        getContentPane().add(lbLibra, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
 
         lbVirgem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Virgo.gif"))); // NOI18N
-        getContentPane().add(lbVirgem, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+        getContentPane().add(lbVirgem, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
 
         lbLeao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif leo.gif"))); // NOI18N
-        getContentPane().add(lbLeao, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+        getContentPane().add(lbLeao, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
 
         lbGemeos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif gemeos.gif"))); // NOI18N
-        getContentPane().add(lbGemeos, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+        getContentPane().add(lbGemeos, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
 
         lbTouro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif touro.gif"))); // NOI18N
-        getContentPane().add(lbTouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+        getContentPane().add(lbTouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
 
         lbAries.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Aries.gif"))); // NOI18N
-        getContentPane().add(lbAries, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+        getContentPane().add(lbAries, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
+
+        lbResumo3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lbResumo3.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(lbResumo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 380, 30));
 
         lbResumo2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lbResumo2.setForeground(new java.awt.Color(255, 255, 255));
@@ -385,75 +396,103 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         String nome, signo, cor;
         int dia, mes, ano;
         cor = "";
-        dia = Integer.parseInt(txtDia.getText());
-        mes = Integer.parseInt(txtMes.getText());
-        ano = Integer.parseInt(txtAno.getText());
-        nome = txtNome.getText();
-        cor = declararCorDaSorte(cor);
-        signo = calcularSigno(dia, mes, ano);
-        lbResumo.setText(fazerTratamento(nome) + " " + nome + " você é do signo de " + signo);
-        lbResumo1.setText("Você tem " + d.format((calcularIdade(dia, mes, ano))) + " anos de idade");
-        lbResumo2.setText("Sua cor da sorte é " + cor);
-        lbSagitario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif sagita resized.gif")));
-        lbAries.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Aries.gif")));
-        lbTouro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif touro.gif")));
-        lbCancer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Cancer.gif")));
-        lbGemeos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif gemeos.gif")));
-        lbLeao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif leo.gif")));
-        lbVirgem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Virgo.gif")));
-        lbLibra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif libra.gif")));
-        lbEscorpiao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Scorpio.gif")));
-        lbCapricornio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Capricornio.gif")));
-        lbAquario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Aquario.gif")));
-        lbPeixes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Peixes.gif")));
-        lbAries.setVisible(false);
-        lbTouro.setVisible(false);
-        lbGemeos.setVisible(false);
-        lbCancer.setVisible(false);
-        lbLeao.setVisible(false);
-        lbVirgem.setVisible(false);
-        lbLibra.setVisible(false);
-        lbEscorpiao.setVisible(false);
-        lbSagitario.setVisible(false);
-        lbCapricornio.setVisible(false);
-        lbAquario.setVisible(false);
-        lbPeixes.setVisible(false);
+        if (txtNome.getText().isEmpty() || txtDia.getText().isEmpty() || txtMes.getText().isEmpty() || txtAno.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Muito engraçado, agora preenche os campos vai.");
 
-        if (signo.equals("Aries")) {
-            lbAries.setVisible(true);
-        }
-        if (signo.equals("Touro")) {
-            lbTouro.setVisible(true);
-        }
-        if (signo.equals("Gêmeos")) {
-            lbGemeos.setVisible(true);
-        }
-        if (signo.equals("Câncer")) {
-            lbCancer.setVisible(true);
-        }
-        if (signo.equals("Leão")) {
-            lbLeao.setVisible(true);
-        }
-        if (signo.equals("Virgem")) {
-            lbVirgem.setVisible(true);
-        }
-        if (signo.equals("Libra")) {
-            lbLibra.setVisible(true);
-        }
-        if (signo.equals("Escorpião")) {
-            lbEscorpiao.setVisible(true);
-        }
-        if (signo.equals("Sagitário")) {
-            lbSagitario.setVisible(true);
-        }
-        if (signo.equals("Capricórnio")) {
-            lbCapricornio.setVisible(true);
-        }
-        if (signo.equals("Aquário")) {
-            lbAquario.setVisible(true);
-        }
-        if (signo.equals("Peixes")) {
-            lbPeixes.setVisible(true);
+        } else {
+
+            dia = Integer.parseInt(txtDia.getText());
+            mes = Integer.parseInt(txtMes.getText());
+            ano = Integer.parseInt(txtAno.getText());
+            if (dia >= 1 && dia <= 31 && mes >= 1 && mes <= 12 && ano >= 1900 && ano <= 2024) {
+                nome = txtNome.getText();
+                if (txtNome.getText().length() < 8) {
+                    JOptionPane.showMessageDialog(null,"Legal, se seu nome fosse verdadeiro.");
+                } else {
+                    cor = declararCorDaSorte(cor);
+                    signo = calcularSigno(dia, mes, ano);
+
+                    //Abaixo estou definindo a forma como vai ser dito, dependendo do Sexo da pessoa.
+                    if (rbMasc.isSelected()) {
+                        lbResumo.setText(fazerTratamento(nome) + " " + nome + " nascido no dia de " + dia + "/" + mes + "/" + ano);
+                        lbResumo1.setText("É do signo de " + signo + " tem " + d.format((calcularIdade(dia, mes, ano))) + " anos");
+                        lbResumo2.setText("Seu numero da sorte é: " + entregarNumeroSorte(100));
+                        lbResumo3.setText("Sua cor da sorte é: " + cor);
+                    } else {
+                        lbResumo.setText(fazerTratamento(nome) + " " + nome + " nascida no dia de " + dia + "/" + mes + "/" + ano);
+                        lbResumo1.setText("É do signo de " + signo + " tem " + d.format((calcularIdade(dia, mes, ano))) + " anos");
+                        lbResumo2.setText("Seu numero da sorte é: " + entregarNumeroSorte(100));
+                        lbResumo3.setText("Sua cor da sorte é: " + cor);
+
+                    }
+                    /**
+                     * Isso tudo abaixo é só para definir os ícones de cada
+                     * signo.
+                     *
+                     */
+                    lbSagitario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif sagita resized.gif")));
+                    lbAries.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Aries.gif")));
+                    lbTouro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif touro.gif")));
+                    lbCancer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Cancer.gif")));
+                    lbGemeos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif gemeos.gif")));
+                    lbLeao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif leo.gif")));
+                    lbVirgem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Virgo.gif")));
+                    lbLibra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif libra.gif")));
+                    lbEscorpiao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Scorpio.gif")));
+                    lbCapricornio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Capricornio.gif")));
+                    lbAquario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Aquario.gif")));
+                    lbPeixes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Peixes.gif")));
+                    lbAries.setVisible(false);
+                    lbTouro.setVisible(false);
+                    lbGemeos.setVisible(false);
+                    lbCancer.setVisible(false);
+                    lbLeao.setVisible(false);
+                    lbVirgem.setVisible(false);
+                    lbLibra.setVisible(false);
+                    lbEscorpiao.setVisible(false);
+                    lbSagitario.setVisible(false);
+                    lbCapricornio.setVisible(false);
+                    lbAquario.setVisible(false);
+                    lbPeixes.setVisible(false);
+
+                    if (signo.equals("Aries")) {
+                        lbAries.setVisible(true);
+                    }
+                    if (signo.equals("Touro")) {
+                        lbTouro.setVisible(true);
+                    }
+                    if (signo.equals("Gêmeos")) {
+                        lbGemeos.setVisible(true);
+                    }
+                    if (signo.equals("Câncer")) {
+                        lbCancer.setVisible(true);
+                    }
+                    if (signo.equals("Leão")) {
+                        lbLeao.setVisible(true);
+                    }
+                    if (signo.equals("Virgem")) {
+                        lbVirgem.setVisible(true);
+                    }
+                    if (signo.equals("Libra")) {
+                        lbLibra.setVisible(true);
+                    }
+                    if (signo.equals("Escorpião")) {
+                        lbEscorpiao.setVisible(true);
+                    }
+                    if (signo.equals("Sagitário")) {
+                        lbSagitario.setVisible(true);
+                    }
+                    if (signo.equals("Capricórnio")) {
+                        lbCapricornio.setVisible(true);
+                    }
+                    if (signo.equals("Aquário")) {
+                        lbAquario.setVisible(true);
+                    }
+                    if (signo.equals("Peixes")) {
+                        lbPeixes.setVisible(true);
+                    }
+                }
+            }
         }
     }//GEN-LAST:event_lbConsultarActionPerformed
 
@@ -524,6 +563,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     private javax.swing.JLabel lbResumo;
     private javax.swing.JLabel lbResumo1;
     private javax.swing.JLabel lbResumo2;
+    private javax.swing.JLabel lbResumo3;
     private javax.swing.JLabel lbSagitario;
     private javax.swing.JLabel lbSexo;
     private javax.swing.JLabel lbTouro;
