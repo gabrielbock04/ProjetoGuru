@@ -203,6 +203,8 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
 
         lbPeixes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Peixes.gif"))); // NOI18N
         getContentPane().add(lbPeixes, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
+
+        lbAquario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Aquario.gif"))); // NOI18N
         getContentPane().add(lbAquario, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
 
         lbCapricornio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Capricornio.gif"))); // NOI18N
@@ -346,7 +348,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbNome.setText("Nome:");
         getContentPane().add(lbNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 40, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\Logo signos Desfocada.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Logo signos Desfocada.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, -1));
 
@@ -373,6 +375,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbCapricornio.setIcon(null);
         lbAquario.setIcon(null);
         lbPeixes.setIcon(null);
+        lbResumo3.setText(null);
     }//GEN-LAST:event_lbLimparActionPerformed
 
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
@@ -407,7 +410,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
             if (dia >= 1 && dia <= 31 && mes >= 1 && mes <= 12 && ano >= 1900 && ano <= 2024) {
                 nome = txtNome.getText();
                 if (txtNome.getText().length() < 8) {
-                    JOptionPane.showMessageDialog(null,"Legal, se seu nome fosse verdadeiro.");
+                    JOptionPane.showMessageDialog(null, "Legal, se seu nome fosse verdadeiro.");
                 } else {
                     cor = declararCorDaSorte(cor);
                     signo = calcularSigno(dia, mes, ano);
@@ -416,12 +419,12 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                     if (rbMasc.isSelected()) {
                         lbResumo.setText(fazerTratamento(nome) + " " + nome + " nascido no dia de " + dia + "/" + mes + "/" + ano);
                         lbResumo1.setText("É do signo de " + signo + " tem " + d.format((calcularIdade(dia, mes, ano))) + " anos");
-                        lbResumo2.setText("Seu numero da sorte é: " + entregarNumeroSorte(100));
+                        lbResumo2.setText("Seu número da sorte é: " + entregarNumeroSorte(100));
                         lbResumo3.setText("Sua cor da sorte é: " + cor);
                     } else {
                         lbResumo.setText(fazerTratamento(nome) + " " + nome + " nascida no dia de " + dia + "/" + mes + "/" + ano);
                         lbResumo1.setText("É do signo de " + signo + " tem " + d.format((calcularIdade(dia, mes, ano))) + " anos");
-                        lbResumo2.setText("Seu numero da sorte é: " + entregarNumeroSorte(100));
+                        lbResumo2.setText("Seu número da sorte é: " + entregarNumeroSorte(100));
                         lbResumo3.setText("Sua cor da sorte é: " + cor);
 
                     }
@@ -492,7 +495,8 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                         lbPeixes.setVisible(true);
                     }
                 }
-            }
+            }else 
+                JOptionPane.showMessageDialog(null,"Dia legal fera");
         }
     }//GEN-LAST:event_lbConsultarActionPerformed
 
