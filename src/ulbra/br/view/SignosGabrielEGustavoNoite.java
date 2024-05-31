@@ -273,6 +273,11 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                 txtAnoActionPerformed(evt);
             }
         });
+        txtAno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAnoKeyTyped(evt);
+            }
+        });
         getContentPane().add(txtAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, 70, -1));
 
         txtDia.addActionListener(new java.awt.event.ActionListener() {
@@ -280,11 +285,21 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                 txtDiaActionPerformed(evt);
             }
         });
+        txtDia.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDiaKeyTyped(evt);
+            }
+        });
         getContentPane().add(txtDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 70, -1));
 
         txtMes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMesActionPerformed(evt);
+            }
+        });
+        txtMes.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMesKeyTyped(evt);
             }
         });
         getContentPane().add(txtMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 70, -1));
@@ -495,10 +510,36 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                         lbPeixes.setVisible(true);
                     }
                 }
-            }else 
-                JOptionPane.showMessageDialog(null,"Dia legal fera");
+            } else {
+                JOptionPane.showMessageDialog(null, "Dia legal fera");
+            }
         }
     }//GEN-LAST:event_lbConsultarActionPerformed
+
+    private void txtDiaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDiaKeyTyped
+        String caracteres = "0123456789";
+        if (!caracteres.contains(evt.getKeyChar() + "")) {
+            JOptionPane.showMessageDialog(null, "Apenas números são permitidos");
+            evt.consume();
+        }
+
+    }//GEN-LAST:event_txtDiaKeyTyped
+
+    private void txtAnoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAnoKeyTyped
+        String caracteres = "0123456789";
+        if (!caracteres.contains(evt.getKeyChar() + "")) {
+            JOptionPane.showMessageDialog(null, "Apenas números são permitidos");
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtAnoKeyTyped
+
+    private void txtMesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMesKeyTyped
+        String caracteres = "0123456789";
+        if (!caracteres.contains(evt.getKeyChar() + "")) {
+            JOptionPane.showMessageDialog(null, "Apenas números são permitidos");
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtMesKeyTyped
 
     /**
      * @param args the command line arguments
