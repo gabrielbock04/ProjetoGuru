@@ -538,8 +538,8 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     }//GEN-LAST:event_lbConsultarActionPerformed
 
     private void txtDiaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDiaKeyTyped
-        String caracteres = "0123456789";
-        if (!caracteres.contains(evt.getKeyChar() + "")) {
+        String caracteres = "qwertyuiopasdfghjklçxczvbnm!@#$%¨&*()-_=+§{[ª~^}]º:;?/°,.";
+        if (caracteres.contains(evt.getKeyChar() + "")) {
             JOptionPane.showMessageDialog(null, "Apenas números são permitidos");
             evt.consume();
         }
@@ -547,16 +547,16 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     }//GEN-LAST:event_txtDiaKeyTyped
 
     private void txtAnoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAnoKeyTyped
-        String caracteres = "0123456789";
-        if (!caracteres.contains(evt.getKeyChar() + "")) {
+        String caracteres = "qwertyuiopasdfghjklçxczvbnm!@#$%¨&*()-_=+§{[ª~^}]º:;?/°,.";
+        if (caracteres.contains(evt.getKeyChar() + "")) {
             JOptionPane.showMessageDialog(null, "Apenas números são permitidos");
             evt.consume();
         }
     }//GEN-LAST:event_txtAnoKeyTyped
 
     private void txtMesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMesKeyTyped
-        String caracteres = "0123456789";
-        if (!caracteres.contains(evt.getKeyChar() + "")) {
+        String caracteres = "qwertyuiopasdfghjklçxczvbnm!@#$%¨&*()-_=+§{[ª~^}]º:;?/°,.";
+        if (caracteres.contains(evt.getKeyChar() + "")) {
             JOptionPane.showMessageDialog(null, "Apenas números são permitidos");
             evt.consume();
         }
