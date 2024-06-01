@@ -87,7 +87,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
 
             signo = "Sagitário";
         }
-        if (dia >= 22 && dia <= 30 && mes == 12 || dia >= 1 && dia <= 20 && mes == 1) {
+        if (dia >= 22 && dia <= 31 && mes == 12 || dia >= 1 && dia <= 20 && mes == 1) {
 
             signo = "Capricórnio";
         }
@@ -407,6 +407,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbAquario.setIcon(null);
         lbPeixes.setIcon(null);
         lbResumo3.setText(null);
+        txtNome.setText("Insira seu nome completo");
     }//GEN-LAST:event_lbLimparActionPerformed
 
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
@@ -442,7 +443,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                 if (dia <= 31 && (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12)) {
 
                     nome = txtNome.getText();
-                    if (txtNome.getText().length() < 8) {
+                    if (txtNome.getText().length() < 8||txtNome.getText().equals("Insira seu nome completo")) {
                         JOptionPane.showMessageDialog(null, "Legal, se seu nome fosse verdadeiro.");
                     } else {
                         cor = declararCorDaSorte(cor);
