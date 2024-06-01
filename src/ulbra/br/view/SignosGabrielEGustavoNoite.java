@@ -99,6 +99,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
 
             signo = "Peixes";
         }
+        
         return signo;
     }
 
@@ -192,6 +193,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         rbMasc = new javax.swing.JRadioButton();
         lbNome = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -199,8 +201,8 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbSagitario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif sagita resized.gif"))); // NOI18N
         getContentPane().add(lbSagitario, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
 
-        txtNome.setForeground(new java.awt.Color(0, 0, 0));
         txtNome.setText("Insira seu nome completo");
+        txtNome.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         txtNome.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtNomeFocusGained(evt);
@@ -375,8 +377,11 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         getContentPane().add(lbNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 40, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Logo signos Desfocada.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        jLabel1.setText("ffg");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, -1));
+
+        jTextField1.setText("jTextField1");
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -619,6 +624,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lbAno;
     private javax.swing.JLabel lbAquario;
     private javax.swing.JLabel lbAries;
