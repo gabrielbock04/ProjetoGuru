@@ -99,7 +99,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
 
             signo = "Peixes";
         }
-        
+
         return signo;
     }
 
@@ -528,7 +528,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                             lbPeixes.setVisible(true);
                         }
                     }
-                }else {
+                } else {
                     JOptionPane.showMessageDialog(null, "Tlgd q n existe isso né parça?");
                 }
             } else {
