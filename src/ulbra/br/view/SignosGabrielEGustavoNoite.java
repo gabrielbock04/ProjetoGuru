@@ -115,7 +115,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     }
 
     public String declararCorDaSorte(String cor) {
-        String corAleatoria[] = {"azul", "vermelho", "amarelo", "verde"};
+        String corAleatoria[] = {"Azul", "Vermelho", "Amarelo", "Verde","Laranja","Marrom","Preto","Roxo","Rosa"};
         Random nCor = new Random();
         int i = nCor.nextInt(corAleatoria.length);
         String cores = corAleatoria[i];
@@ -162,7 +162,6 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         lbSagitario = new javax.swing.JLabel();
-        txtNome = new javax.swing.JTextField();
         lbCancer = new javax.swing.JLabel();
         lbPeixes = new javax.swing.JLabel();
         lbAquario = new javax.swing.JLabel();
@@ -174,6 +173,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbGemeos = new javax.swing.JLabel();
         lbTouro = new javax.swing.JLabel();
         lbAries = new javax.swing.JLabel();
+        txtNome = new javax.swing.JTextField();
         lbResumo3 = new javax.swing.JLabel();
         lbResumo2 = new javax.swing.JLabel();
         lbResumo1 = new javax.swing.JLabel();
@@ -199,9 +199,42 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbSagitario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif sagita resized.gif"))); // NOI18N
-        getContentPane().add(lbSagitario, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
+        getContentPane().add(lbSagitario, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, -1, -1));
 
-        txtNome.setText("Insira seu nome completo");
+        lbCancer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Cancer.gif"))); // NOI18N
+        getContentPane().add(lbCancer, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, -1, -1));
+
+        lbPeixes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Peixes.gif"))); // NOI18N
+        getContentPane().add(lbPeixes, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, -1, -1));
+
+        lbAquario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Aquario.gif"))); // NOI18N
+        getContentPane().add(lbAquario, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, -1, -1));
+
+        lbCapricornio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Capricornio.gif"))); // NOI18N
+        getContentPane().add(lbCapricornio, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, -1, -1));
+
+        lbEscorpiao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Scorpio.gif"))); // NOI18N
+        getContentPane().add(lbEscorpiao, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, -1, -1));
+
+        lbLibra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif libra.gif"))); // NOI18N
+        getContentPane().add(lbLibra, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, -1, -1));
+
+        lbVirgem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Virgo.gif"))); // NOI18N
+        getContentPane().add(lbVirgem, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, -1, -1));
+
+        lbLeao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif leo.gif"))); // NOI18N
+        getContentPane().add(lbLeao, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, -1, -1));
+
+        lbGemeos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif gemeos.gif"))); // NOI18N
+        getContentPane().add(lbGemeos, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, -1, -1));
+
+        lbTouro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif touro.gif"))); // NOI18N
+        getContentPane().add(lbTouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, -1, -1));
+
+        lbAries.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Aries.gif"))); // NOI18N
+        getContentPane().add(lbAries, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, -1, -1));
+
+        txtNome.setText("Insira seu nome e sobrenome");
         txtNome.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         txtNome.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -222,39 +255,6 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 240, -1));
-
-        lbCancer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Cancer.gif"))); // NOI18N
-        getContentPane().add(lbCancer, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
-
-        lbPeixes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Peixes.gif"))); // NOI18N
-        getContentPane().add(lbPeixes, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
-
-        lbAquario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Aquario.gif"))); // NOI18N
-        getContentPane().add(lbAquario, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
-
-        lbCapricornio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Capricornio.gif"))); // NOI18N
-        getContentPane().add(lbCapricornio, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
-
-        lbEscorpiao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif Scorpio.gif"))); // NOI18N
-        getContentPane().add(lbEscorpiao, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
-
-        lbLibra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif libra.gif"))); // NOI18N
-        getContentPane().add(lbLibra, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
-
-        lbVirgem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Virgo.gif"))); // NOI18N
-        getContentPane().add(lbVirgem, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
-
-        lbLeao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif leo.gif"))); // NOI18N
-        getContentPane().add(lbLeao, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
-
-        lbGemeos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif gemeos.gif"))); // NOI18N
-        getContentPane().add(lbGemeos, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
-
-        lbTouro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/Gif touro.gif"))); // NOI18N
-        getContentPane().add(lbTouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
-
-        lbAries.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Aries.gif"))); // NOI18N
-        getContentPane().add(lbAries, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
 
         lbResumo3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lbResumo3.setForeground(new java.awt.Color(255, 255, 255));
@@ -412,7 +412,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbAquario.setIcon(null);
         lbPeixes.setIcon(null);
         lbResumo3.setText(null);
-        txtNome.setText("Insira seu nome completo");
+        txtNome.setText("Insira seu nome e sobrenome");
     }//GEN-LAST:event_lbLimparActionPerformed
 
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
@@ -696,14 +696,14 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     }//GEN-LAST:event_txtMesKeyTyped
 
     private void txtNomeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNomeFocusGained
-        if (txtNome.getText().equals("Insira seu nome completo")) {
+        if (txtNome.getText().equals("Insira seu nome e sobrenome")) {
             txtNome.setText("");
         }
 
     }//GEN-LAST:event_txtNomeFocusGained
     private void txtNomeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNomeFocusLost
         if (txtNome.getText().equals("")) {
-            txtNome.setText("Insira seu nome completo");
+            txtNome.setText("Insira seu nome e sobrenome");
         }
     }//GEN-LAST:event_txtNomeFocusLost
 
