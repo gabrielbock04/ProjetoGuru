@@ -216,6 +216,11 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                 txtNomeActionPerformed(evt);
             }
         });
+        txtNome.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNomeKeyTyped(evt);
+            }
+        });
         getContentPane().add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 240, -1));
 
         lbCancer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ulbra/br/view/gif Cancer.gif"))); // NOI18N
@@ -701,6 +706,14 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
             txtNome.setText("Insira seu nome completo");
         }
     }//GEN-LAST:event_txtNomeFocusLost
+
+    private void txtNomeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNomeKeyTyped
+        String caracteres ="!@#$%¨&*()-_=+§{[ª~^|}]'º:;?/°,.\\\"";
+        if (caracteres.contains(evt.getKeyChar() + "")) {
+            JOptionPane.showMessageDialog(null, "Caracteres especiais não são permitidos.");
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtNomeKeyTyped
 
     /**
      * @param args the command line arguments
