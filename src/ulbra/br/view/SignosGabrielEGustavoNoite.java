@@ -704,7 +704,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNomeFocusGained
     private void txtNomeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNomeFocusLost
         if (txtNome.getText().equals("")) {
-            txtNome.setText("Insira seu nome e sobrenome");
+            txtNome.setText("Insira seu nome e sobrenome ");
         }
     }//GEN-LAST:event_txtNomeFocusLost
 
