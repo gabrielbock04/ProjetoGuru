@@ -178,8 +178,8 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbResumo2 = new javax.swing.JLabel();
         lbResumo1 = new javax.swing.JLabel();
         lbResumo = new javax.swing.JLabel();
-        lbLimpar = new javax.swing.JButton();
-        lbConsultar = new javax.swing.JButton();
+        btLimpar = new javax.swing.JButton();
+        btConsultar = new javax.swing.JButton();
         lbMes = new javax.swing.JLabel();
         txtAno = new javax.swing.JTextField();
         txtDia = new javax.swing.JTextField();
@@ -273,21 +273,21 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbResumo.setText("Resumo");
         getContentPane().add(lbResumo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 380, 30));
 
-        lbLimpar.setText("Limpar");
-        lbLimpar.addActionListener(new java.awt.event.ActionListener() {
+        btLimpar.setText("Limpar");
+        btLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lbLimparActionPerformed(evt);
+                btLimparActionPerformed(evt);
             }
         });
-        getContentPane().add(lbLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, -1, -1));
+        getContentPane().add(btLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, -1, -1));
 
-        lbConsultar.setText("Consultar");
-        lbConsultar.addActionListener(new java.awt.event.ActionListener() {
+        btConsultar.setText("Consultar");
+        btConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lbConsultarActionPerformed(evt);
+                btConsultarActionPerformed(evt);
             }
         });
-        getContentPane().add(lbConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, -1, -1));
+        getContentPane().add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, -1, -1));
 
         lbMes.setForeground(new java.awt.Color(255, 255, 255));
         lbMes.setText("Mês");
@@ -391,7 +391,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void lbLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lbLimparActionPerformed
+    private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
         txtNome.setText(null);
         txtAno.setText(null);
         txtDia.setText(null);
@@ -413,7 +413,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbPeixes.setIcon(null);
         lbResumo3.setText(null);
         txtNome.setText("Insira seu nome e sobrenome");
-    }//GEN-LAST:event_lbLimparActionPerformed
+    }//GEN-LAST:event_btLimparActionPerformed
 
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
         // TODO add your handling code here:
@@ -431,7 +431,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDiaActionPerformed
 
-    private void lbConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lbConsultarActionPerformed
+    private void btConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarActionPerformed
         DecimalFormat d = new DecimalFormat("0");
         String nome, signo, cor;
         int dia, mes, ano;
@@ -668,7 +668,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Po, data legal, marquei de rir daqui 1 semana.");
             }
         }
-    }//GEN-LAST:event_lbConsultarActionPerformed
+    }//GEN-LAST:event_btConsultarActionPerformed
 
     private void txtDiaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDiaKeyTyped
         String caracteres = "QWERTYUIOPASDFGHJKLÇZXCVBNMqwertyuiopasdfghjklçxczvbnm!@#$%¨&*()-_=+§{[ª~^|}]'º:;?/°,.\\\"";
@@ -708,9 +708,10 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNomeFocusLost
 
     private void txtNomeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNomeKeyTyped
-        String caracteres ="!@#$%¨&*()-_=+§{[ª~^|}]'º:;?/°,.\\\"";
+        String caracteres ="1234567890!@#$%¨&*()-_=+§{[ª~^|}]'º:;?/°,.\\\"";
         if (caracteres.contains(evt.getKeyChar() + "")) {
             JOptionPane.showMessageDialog(null, "Caracteres especiais não são permitidos.");
+            JOptionPane.showMessageDialog(null, "Números também não, então pfv só letras tá? ;)");
             evt.consume();
         }
     }//GEN-LAST:event_txtNomeKeyTyped
@@ -760,6 +761,8 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btConsultar;
+    private javax.swing.JButton btLimpar;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -770,13 +773,11 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
     private javax.swing.JLabel lbAries;
     private javax.swing.JLabel lbCancer;
     private javax.swing.JLabel lbCapricornio;
-    private javax.swing.JButton lbConsultar;
     private javax.swing.JLabel lbDia;
     private javax.swing.JLabel lbEscorpiao;
     private javax.swing.JLabel lbGemeos;
     private javax.swing.JLabel lbLeao;
     private javax.swing.JLabel lbLibra;
-    private javax.swing.JButton lbLimpar;
     private javax.swing.JLabel lbMes;
     private javax.swing.JLabel lbNome;
     private javax.swing.JLabel lbPeixes;
