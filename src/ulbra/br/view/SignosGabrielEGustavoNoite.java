@@ -413,6 +413,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
         lbPeixes.setIcon(null);
         lbResumo3.setText(null);
         txtNome.setText("Insira seu nome e sobrenome");
+        JOptionPane.showMessageDialog(null, "Campos limpos");
     }//GEN-LAST:event_btLimparActionPerformed
 
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
@@ -447,7 +448,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
             if (mes >= 1 && mes <= 12 && ano >= 1900 && ano <= 2024) {
                 if ((mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) && dia >= 1 && dia <= 31) {
                     nome = txtNome.getText();
-                    if (nome.length() < 8 || nome.equals("Insira seu nome completo")) {
+                    if (nome.length() < 8 || nome.equals("Insira seu nome e sobrenome")) {
                         JOptionPane.showMessageDialog(null, "Legal, se seu nome fosse verdadeiro.");
                     } else {
                         cor = declararCorDaSorte(cor);
@@ -519,7 +520,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                     }
                 } else if ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia >= 1 && dia <= 30) {
                     nome = txtNome.getText();
-                    if (nome.length() < 8 || nome.equals("Insira seu nome completo")) {
+                    if (nome.length() < 8 || nome.equals("Insira seu nome e sobrenome")) {
                         JOptionPane.showMessageDialog(null, "Legal, se seu nome fosse verdadeiro.");
                     } else {
                         cor = declararCorDaSorte(cor);
@@ -591,7 +592,7 @@ public class SignosGabrielEGustavoNoite extends javax.swing.JFrame {
                     }
                 } else if (mes == 2 && dia >= 1 && dia <= 29) {
                     nome = txtNome.getText();
-                    if (nome.length() < 8 || nome.equals("Insira seu nome completo")) {
+                    if (nome.length() < 8 || nome.equals("Insira seu nome e sobrenome")) {
                         JOptionPane.showMessageDialog(null, "Legal, se seu nome fosse verdadeiro.");
                     } else {
                         cor = declararCorDaSorte(cor);
